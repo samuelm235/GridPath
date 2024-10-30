@@ -23,5 +23,6 @@ public class Main{
         System.out.println(one.getNextLoc(2, 4));
         System.out.println(one.getNextLoc(4, 3));
         System.out.println(two);
+        System.out.println(two.sumPath(1, 1));
     }
 }

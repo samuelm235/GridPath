@@ -43,11 +43,14 @@ public class GridPath
         int sum = grid[row][col];
         int new_row = row;
         int new_col = col;
-        while(!(row == grid.length && col == grid[0].length))
+        while(!(new_row == grid.length -1 && new_col == grid[0].length -1))
         {
-            getNextLoc(new_row, new_col);
-            sum =sum + getNextLoc(row, col);
+            Location loc = getNextLoc(new_row, new_col);
+            new_row = loc.getRow();
+            new_col = loc.getCol();
+            sum = sum + grid[new_row][new_col];
+            
         }
-        return 0;
+        return sum;
         /* to be implemented in part (b) */ }
 }
